@@ -148,7 +148,7 @@ end
 
 -- vehicle constants
 
--- local weaponDirection = Vector3(0, -1, 0)
+local weaponDirection = Vector3(0, -1, 0)
 
 local neutralPosition = {
    y = 2000,
@@ -182,16 +182,6 @@ local pids = {
 }
 
 -- -- vehicle functions
-
-function resetPIDs()
-   pids.x.err_integral = 0
-   pids.y.err_integral = 0
-   pids.z.err_integral = 0
-
-   pids.rx.pid.err_integral = 0
-   pids.ry.pid.err_integral = 0
-   pids.rz.pid.err_integral = 0
-end
 
 function tickPIDs(arg)
    local I = arg[1]
